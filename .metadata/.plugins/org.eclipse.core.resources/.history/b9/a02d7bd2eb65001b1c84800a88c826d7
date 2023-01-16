@@ -1,0 +1,30 @@
+package DriverFactory;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Planit 
+{
+
+	public static void main(String[] args)
+	{
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\bharg\\eclipse-july\\BhargavQAProject\\CommonJarFiles\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("http://demowebshop.tricentis.com/");
+		
+		WebElement pagetitle= driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[1]"));
+		
+		if(pagetitle.isDisplayed())
+		{
+			System.out.println("Message is displayed");
+		}
+		
+		driver.close();
+
+	}
+
+}

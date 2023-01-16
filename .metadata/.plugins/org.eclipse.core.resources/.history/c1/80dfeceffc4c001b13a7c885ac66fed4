@@ -1,0 +1,20 @@
+package Javaconcepts;
+
+public class C extends childclass
+{
+
+	public void fish()
+	{
+		System.out.println("This is chil-method");
+	}
+	
+	public static void main(String args[]) 
+	{
+	 C c=new C();
+	 c.add();
+	 c.demo();
+	 c.fish();
+		
+	}
+	
+}

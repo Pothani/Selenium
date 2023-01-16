@@ -1,0 +1,19 @@
+package SeleniumFirstClass;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WindowHandles {
+
+	public static void main(String[] args) {
+		
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Bhargav\\chromedriver.exe");
+		WebDriver d1 = new ChromeDriver();
+		d1.get("https://toolsqa.com/automation-practice-switch-windows/");
+		
+		
+
+	}
+
+}

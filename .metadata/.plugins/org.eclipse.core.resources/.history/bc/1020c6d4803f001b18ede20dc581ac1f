@@ -1,0 +1,42 @@
+package pages.testcases;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import pages.login;
+
+public class VerifyHRMLogin {
+	
+	
+	
+	@Test
+	public void verifylogin() {
+		
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Bhargav\\chromedriver.exe");
+		
+		
+		WebDriver driver = new ChromeDriver();
+		
+		
+		driver.manage().window().maximize();
+		
+		driver.get("http:facebook.com");
+		
+		login  log= new login(driver);
+		
+		log.typeusername();
+		
+		log.typepassword();
+		
+		log.typesigin();
+		
+		
+		
+		driver.quit();
+		
+	}
+
+}

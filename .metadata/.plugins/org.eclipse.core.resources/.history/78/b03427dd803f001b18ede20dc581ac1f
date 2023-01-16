@@ -1,0 +1,39 @@
+package SeleniumFirstClass;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class practise06 {
+
+	public static void main(String[] args) {
+
+          System.setProperty("webdriver.chrome.driver","C:\\Bhargav\\chromedriver.exe");
+          
+          WebDriver driver= new ChromeDriver();
+		
+          driver.get("http://www.manutd.com");
+          
+          driver.manage().window().maximize();
+          
+          driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+          
+          /*driver.findElement(By.name("txtUserName")).sendKeys("qaplanet1");
+          
+          driver.findElement(By.name("txtPassword")).sendKeys("lab1");
+          
+          driver.findElement(By.name("Submit")).click();
+          
+          driver.findElement(By.xpath("//a[text()=\"Change Password\"]")).click();
+          
+          driver.findElement(By.xpath("//input[@id='editBtn']")).click();
+          */
+         
+          
+          
+		
+	}
+
+}

@@ -1,0 +1,36 @@
+package SeleniumFirstClass;
+
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WindowHandles {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Bhargav\\chromedriver.exe");
+		WebDriver d1 = new ChromeDriver();
+		d1.get("https://toolsqa.com/automation-practice-switch-windows/");
+		WebElement clickElement = d1.findElement(By.id("button1")); 
+		 
+		 for(int i = 0; i < 3; i++)
+		 {
+		 clickElement.click();
+		 Thread.sleep(3000);
+		 }
+
+		 
+		Set<String> hanlde= d1.getWindowHandles();
+		
+		for(String news:hanlde){
+			
+			System.out.println("Window handle - > " + news);
+			
+		}
+	}
+
+}

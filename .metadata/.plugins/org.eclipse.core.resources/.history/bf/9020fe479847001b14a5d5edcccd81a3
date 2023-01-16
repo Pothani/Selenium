@@ -1,0 +1,12 @@
+package Com.Pages;
+
+public class palindrome {
+
+	public static void main(String[] args) {
+		
+		String S1="Madam";
+		
+
+	}
+
+}

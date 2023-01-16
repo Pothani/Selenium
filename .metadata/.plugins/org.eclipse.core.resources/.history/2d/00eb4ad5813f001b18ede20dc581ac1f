@@ -1,0 +1,18 @@
+package Com.BhargavPages;
+
+public class demo {
+	
+	public void appLaunch() {}
+	
+	public void appstart() {}
+	public void appclose() {}
+	public void appstop() {}
+	
+	
+	public static void  main(String args[]) {
+		
+		System.setProperty("webdriver.gecko.driver","C:\\Bhargav\\geckodriver.exe");
+		
+	}
+
+}

@@ -1,0 +1,22 @@
+package demo;
+
+public class Basicscript {
+
+	public static void main(String[] args) 
+	{
+         
+		String S1= "Bhargav";
+		
+		int l= S1.length();
+		
+		String rev="";
+		
+		for(int j=S1.length()-1;j>=0;j--)
+		{
+			rev=rev+S1.charAt(j);
+		}
+		
+		System.out.println(rev);
+	}
+
+}

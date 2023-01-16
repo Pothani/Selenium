@@ -1,0 +1,24 @@
+package Seleniumconcepts;
+
+import org.testng.annotations.Test;
+
+import junit.framework.Assert;
+
+public class Assertions
+{
+	@Test
+	
+	public void demo() {
+		
+		System.out.println("welcome");
+		Assert.assertEquals(true, false);
+		
+		System.out.println("To the world");
+		System.out.println("GHRMS");
+		System.out.println("VAsu deva");
+	}
+	
+	
+	
+
+}

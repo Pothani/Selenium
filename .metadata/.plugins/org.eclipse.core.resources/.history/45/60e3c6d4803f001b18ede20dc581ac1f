@@ -1,0 +1,23 @@
+package pages.testcases;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import pages.flipkartlogin;
+import utility.browserfactory;
+
+public class FlipkartTestcase {
+	
+	@Test
+	public void loginn() {
+		
+		WebDriver driver=browserfactory.startbroser("chrome", "http://www.flipkart.com/");
+		
+		flipkartlogin filip = PageFactory.initElements(driver, flipkartlogin.class);
+		
+		filip.Filpkarlogin("8143230137", "Amma@123");
+		
+	}
+
+}

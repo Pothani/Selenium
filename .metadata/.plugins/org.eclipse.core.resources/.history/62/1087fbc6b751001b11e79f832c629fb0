@@ -1,0 +1,19 @@
+package Practisejava;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class collections 
+{
+
+	public static void main(String[] args)
+	{
+		List arr= new ArrayList();
+		arr.add("Bhargav");
+		arr.add(3);
+		arr.add(2.3);
+		
+
+	}
+
+}

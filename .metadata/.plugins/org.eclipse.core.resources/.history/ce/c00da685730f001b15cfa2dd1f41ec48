@@ -1,0 +1,20 @@
+package javaexamples;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class reversestring {
+
+	public static void main(String[] args) {
+		
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Bhargav\\chromedriver.exe");
+		
+		WebDriver d=  new ChromeDriver();
+
+		d.get("https://e.maccosmetics.la.cl.dev.ncsa.elcdev.net/product/13854/966/products/makeup/labios/lipstick/viva-glam-lipstick#!/shade/Viva_Glam_I");
+		
+		System.out.println(d.getCurrentUrl());
+	}
+
+}

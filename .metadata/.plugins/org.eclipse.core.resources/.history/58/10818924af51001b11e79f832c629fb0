@@ -1,0 +1,13 @@
+package Practisejava;
+
+public class Primenumber 
+
+{
+
+	public final static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}

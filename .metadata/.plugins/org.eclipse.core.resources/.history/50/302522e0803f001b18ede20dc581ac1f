@@ -1,0 +1,109 @@
+package seleniumimplemention;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+public class SeleniumImplementation {
+	
+	
+	Actions action;
+	
+	public void performmousehover(WebElement element,WebDriver driver) {
+		
+		action=new Actions(driver);
+		action.moveToElement(element).build().perform();
+	}
+	
+	//clicking the Element
+	public void click(WebElement element) {
+		
+		element.click();
+	}
+	
+	//Clear the Element
+	public void clear(WebElement element) {
+		
+		element.clear();
+	}
+	
+	//Sending the date to text box
+	public void settext(String text,WebElement element) {
+		
+		element.sendKeys(text);
+	}
+	
+	//Dropdown using visible text
+	public void selectByvisibleText(WebElement selectsize, String text) {
+		
+		Select s= new Select(selectsize);
+		
+		s.deselectByVisibleText(text);	
+		
+	}
+	
+	//javascript exectutor
+	public void clickusingjavascriptexecuter(WebElement element , WebDriver driver ) {
+		
+		JavascriptExecutor executer =  (JavascriptExecutor)driver;
+		
+		executer.executeScript("argument[0].click()", element);
+	}
+
+	
+	//refresh the browser
+	public void refresh(WebDriver driver ) {
+		
+		driver.navigate().refresh();
+	}
+	
+	public boolean validateText(WebElement element , WebDriver driver,String expectedtext) {
+		
+		
+		String observedtextText = element.getText();
+		
+		if(observedtextText.equals(expectedtext)) {
+			
+			return true;
+		}
+		return false;
+	}
+	
+	
+	//screenshot
+	public void screenshot(WebElement element , WebDriver driver) {
+		
+		element=(WebElement)((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

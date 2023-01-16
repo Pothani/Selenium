@@ -1,0 +1,40 @@
+package SeleniumFirstClass;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class parellel3 {
+	
+	WebDriver driver;
+	
+	@Test
+    public void Login() {
+      
+	   driver.findElement(By.xpath("//input[@name='txtUserName']")).sendKeys("qaplanet1");
+	   driver.findElement(By.xpath("//input[@name='txtPassword']")).sendKeys("lab1");
+	   driver.findElement(By.name("Submit")).click();
+	   
+    }
+	
+	@Test
+	public void z() {
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Bhargav\\chromedriver.exe");
+		
+		driver= new ChromeDriver();
+		
+		driver.get("http://apps.qaplanet.in/hrm/login.php");
+		
+		driver.manage().window().maximize();
+		
+	}	
+   
+   
+   @Test
+   public void logout() {
+	   
+	   driver.findElement(By.xpath("//*[@id=\"option-menu\"]/li[3]/a")).click();
+   }
+}

@@ -1,0 +1,27 @@
+package pages.testcases;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import pages.Changepassword;
+import pages.HRMLogin;
+import utility.browserfactory;
+
+public class changepasswordtestcase {
+	
+	
+	@Test
+	public void CHANGE() {
+		
+		browserfactory.startbroser("chrome", "http://apps.qaplanet.in/hrm/login.php");
+		
+		//Changepassword CH=PageFactory.initElements(driver, Changepassword.class);
+		
+		WebDriver driver = null;
+		Changepassword CH=PageFactory.initElements(driver, Changepassword.class);
+		
+		CH.changepass( "lab1", "lab2", "lab2");
+	}
+
+}

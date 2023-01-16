@@ -1,0 +1,11 @@
+package Javaconcepts;
+
+public class B
+{
+	public void demo() 
+	   {
+		   
+		  System.out.println("This is class B");
+	   }
+
+}

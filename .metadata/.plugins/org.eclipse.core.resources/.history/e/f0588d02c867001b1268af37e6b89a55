@@ -1,0 +1,18 @@
+package DriverFactory;
+
+public class Planit 
+{
+
+	public static void main(String[] args)
+	{
+		
+		String s1="Bhargav";
+		int total=s1.length();
+		int arem=s1.replace("a", "").length();
+		int a= total-arem;
+		System.out.println(a);
+		
+          
+	}
+
+}

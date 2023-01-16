@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+/**
+ * @author bharg
+ *
+ */
+public class Logout {
+	
+	WebDriver driver;
+	
+	
+	By logout=By.name("//*[@id=\"option-menu\"]/li[3]/a");
+	
+	public Logout(WebDriver driver) {
+		
+		this.driver=driver;
+	}
+	
+	
+	public void logout() {
+		
+		driver.findElement(logout).click();
+	}
+	
+	
+
+}

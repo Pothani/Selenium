@@ -1,0 +1,69 @@
+package com.automationpractise.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import seleniumimplemention.SeleniumImplementation;
+
+public class AddtoCartpage {
+	
+	WebDriver driver;
+	 
+	 public void loginpage(WebDriver driver) {
+		 
+		 this.driver=driver;
+	 }
+
+	
+	@FindBy(xpath="//*[@id=\"homefeatured\"]/li[2]/div/div[1]/div/a[1]/img")
+	WebElement Itemimage;
+	
+	@FindBy(xpath="//*[@id=\"homefeatured\"]/li[2]/div/div[2]/div[2]/a[2]")
+	WebElement btnmore;
+	
+	
+	@FindBy(xpath="//*[@id=\"quantity_wanted\"]")
+	WebElement txtquantity;
+	
+	@FindBy(xpath="//*[@id=\"group_1\"]")
+	WebElement selectsize;
+	
+	@FindBy(xpath="//*[@id=\"add_to_cart\"]/button")
+	WebElement selectaddtocart;
+	
+	@FindBy(css="div#layer_cart a > span")
+	WebElement btnproceed;
+	
+	@FindBy(xpath="//*[@id=\"header\"]/div[3]/div/div/div[3]/div/a/span[1]")
+	WebElement carttext;
+
+	SeleniumImplementation selenium;
+	
+	
+
+	public void Addtocartpage(WebDriver driver) {
+		
+		
+		
+		PageFactory.initElements(driver, this);
+		selenium=new SeleniumImplementation();
+		
+	}
+	
+	public boolean validateAddtocart(WebDriver driver) {
+		
+		selenium.performmousehover(Itemimage, driver);
+		selenium.click(btnmore);
+		selenium.click(txtquantity);
+		selenium.settext("3", txtquantity);
+		selenium.selectByvisibleText(selectsize, "M");
+		selenium.click(selectaddtocart);
+		selenium.clickusingjavascriptexecuter(btnproceed, driver);
+		selenium.refresh(driver);
+		selenium.validateText(carttext, driver, "3");
+		return selenium.validateText(carttext, driver, "3");
+	}
+	
+}

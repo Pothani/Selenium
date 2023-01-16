@@ -1,0 +1,29 @@
+package Utilities;
+
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelUtilites 
+{
+	
+	
+	 public static void getrowcount() throws Exception {
+		 
+	  XSSFWorkbook wd= new XSSFWorkbook("C:\\Users\\bharg\\eclipse-july\\BhargavQAProject\\TestInputs\\InputSheet.xls");
+	  
+	  XSSFSheet sheet=wd.getSheet("ApplicationLogin");
+	  
+	 int rowcount= sheet.getPhysicalNumberOfRows();
+	 
+	 System.out.println("No.of rows count"+rowcount);
+	 }
+	 
+	 public static void main(String[] args) throws Exception
+		{
+	 
+		 getrowcount();
+		 
+		}
+}

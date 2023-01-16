@@ -1,0 +1,46 @@
+package Com.Pages;
+
+public class StringManipulations 
+{
+
+	public static void main(String[] args)
+	{
+		String s1="The rain has started here selenium s uytrs";
+		
+		//System.out.println(s1.length());//It will give length of string =from 1
+		
+		/*System.out.println(s1.indexOf("s"));//1st occrance
+		
+		System.out.println(s1.indexOf("s", s1.indexOf("s")+1));//2nd ocuurance
+		
+		System.out.println(s1.indexOf('s', s1.indexOf('s', s1.indexOf('s')+1)+1));//3rd occurance
+		
+		System.out.println(s1.indexOf('s', s1.indexOf('s',s1.indexOf('s',s1.indexOf('s')+1)+1)+1));
+		
+		System.out.println(s1.indexOf('s', s1.indexOf('s',s1.indexOf('s',s1.indexOf('s',s1.indexOf('s')+1)+1)+1)+1));
+		
+		
+		String s2="Pavan";*/
+		
+		/*for(int i=s1.length()-1;i>=0;i--) 
+		{
+			s2=s2+s1.charAt(i);
+			
+		}
+		
+		System.out.println(s2);*/
+		
+		
+		/*System.out.println(s1.equals(s2));
+		
+		System.out.println(s1.charAt(3));*/
+		
+		
+		String str="xyz";
+		String str1="Abc";
+		System.out.println(str+str1);
+		
+
+	}
+
+}

@@ -1,0 +1,18 @@
+package Com.Pages;
+
+public class StringManipulations 
+{
+
+	public static void main(String[] args)
+	{
+		String s1="The rain has started here selenium";
+		
+		System.out.println(s1.length());//It will give length of string =from 0
+		
+		System.out.println(s1.indexOf("s"));
+		
+		
+
+	}
+
+}

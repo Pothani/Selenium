@@ -1,0 +1,26 @@
+package FunctionLibrary;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PrimusBank2 {
+	
+	ChromeDriver driver;
+	
+	public void AppLaunch() {
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\bharg\\eclipse-july\\BhargavQAProject\\CommonJarFiles\\chromedriver.exe");
+		
+		
+		
+		
+	}
+	
+	
+	
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

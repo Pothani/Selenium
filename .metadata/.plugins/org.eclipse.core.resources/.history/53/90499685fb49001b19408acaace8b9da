@@ -1,0 +1,25 @@
+package Com.Pages;
+
+public class Override
+{
+	public class one{
+    public void add()
+    {
+    	System.out.println("Bharagvwe");
+    }
+	}
+    public class two extends Override
+    {
+    	public void add()
+        {
+        	System.out.println("Bharagv");
+        }
+    }
+	
+	public static void main(String[] args) 
+	{
+		two t=new two()
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package Javaconcepts;
+
+public class MethodOverriding 
+{
+	
+	public void demo()
+	{
+	   System.out.println("This is the demo class");
+	}
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}

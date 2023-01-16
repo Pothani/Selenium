@@ -1,0 +1,57 @@
+package SeleniumFirstClass;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class flipkart {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Bhargav\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.navigate().to("http://manutd.com");
+		
+		driver.manage().window().maximize();
+		
+		//implicit wait
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+	    String str=	driver.getCurrentUrl();
+	    
+	    System.out.println(str);
+	    
+	    driver.findElement(By.xpath("//*[@id=\"gigyalogin\"]")).click();
+	    
+	    try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    
+	    WebElement login= driver.findElement(By.xpath("//input[contains(@id,'loginID')]"));
+	    WebElement pass = driver.findElement(By.xpath("//input[contains(@id,'password')]"));
+	    WebElement signin= driver.findElement(By.xpath("//input[contains(@value,'LOG IN')]"));
+	    WebElement forget=  driver.findElement(By.className("forget_password"));
+	    
+	    if(login.isDisplayed()&&pass.isDisplayed()&&signin.isDisplayed()&&forget.isDisplayed()) {
+	    	
+	    	System.out.println("Displayed");
+	    	
+	    	
+	    }
+	    
+	    else {
+	    	
+	    	System.out.println("Not displayed");
+	    }
+	}
+
+}

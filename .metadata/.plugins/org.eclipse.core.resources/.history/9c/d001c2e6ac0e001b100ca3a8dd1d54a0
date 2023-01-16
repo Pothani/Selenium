@@ -1,0 +1,19 @@
+package javaexamples;
+
+public class reversestring {
+
+	public static void main(String[] args) {
+		
+		
+		String s1="Bhargav";
+		
+		String s2="Bhargav is a good";
+		
+		String rev = "";
+		
+		System.out.println(s1==s2);
+		
+		
+	}
+
+}

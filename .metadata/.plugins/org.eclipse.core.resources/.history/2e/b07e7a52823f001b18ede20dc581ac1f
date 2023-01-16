@@ -1,0 +1,26 @@
+package Com.BhargavPages;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class demo {
+	
+	FirefoxDriver d = new FirefoxDriver();
+	
+	public void appLaunch() {
+		
+		d.get("http://primusbank.qedgetech.com/");
+		
+	}
+	
+	public void appstart() {}
+	public void appclose() {}
+	public void appstop() {}
+	
+	
+	public static void  main(String args[]) {
+		
+		System.setProperty("webdriver.gecko.driver","C:\\Bhargav\\geckodriver.exe");
+		
+	}
+
+}

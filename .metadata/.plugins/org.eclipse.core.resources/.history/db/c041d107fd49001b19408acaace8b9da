@@ -1,0 +1,32 @@
+package Com.Pages;
+
+	class A
+	{
+		int i;
+		public void demo() 
+		{
+		    System.out.println("Firstmethod");
+		}
+		
+	}
+	class B extends A
+	{
+		int i;
+		public void demo() 
+		{
+			super.i=10;
+			super.demo();
+		    System.out.println("secondtmethod");
+		}
+	}
+	
+	public class Override 
+	{
+	public static void main(String[] args) {
+		
+         B c=new B();
+         c.demo();
+		
+	}
+	
+}

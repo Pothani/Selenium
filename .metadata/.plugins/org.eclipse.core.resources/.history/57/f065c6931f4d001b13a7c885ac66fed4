@@ -1,0 +1,44 @@
+package Javaconcepts;
+
+class abc
+{
+     int i=10;
+ 
+/*	void add()
+	{
+		System.out.println("This method is from parent class");	
+	}*/
+	
+}
+
+class def extends abc
+{
+ 
+	int i=20;
+	
+	void show(int i)
+	{
+		System.out.println(super.i);
+	}
+	
+	/*void add()
+	{
+		System.out.println("This method is from child class");	
+		this.add();
+		super.add();
+	}*/
+	
+	
+	
+}
+
+public class Superkeyword {
+
+	public static void main(String[] args)
+	{
+		def d= new def();
+		d.show(30);
+
+	}
+
+}

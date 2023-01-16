@@ -1,0 +1,18 @@
+package FunctionLibrary;
+
+public class NonStaticMethods 
+{
+   public int add(int a, int b) {
+	   
+	   int sum= a+b;
+	   
+	   return sum;
+   }
+	
+ public static void Main(String args[]) {
+	
+	 NonStaticMethods  NS= new NonStaticMethods ();
+	 
+	 NS.add(20, 20);
+}
+}

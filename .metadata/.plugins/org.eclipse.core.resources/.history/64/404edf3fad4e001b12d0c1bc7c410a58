@@ -1,0 +1,31 @@
+package Javaconcepts;
+
+public class MethodOverriding 
+{
+
+	class A{
+	
+		public void demo()
+		{
+			System.out.println("This is claas A");
+		}
+		
+	}
+	
+	
+	class B{
+		
+		public void demo()
+		{
+			System.out.println("This is claas A");
+		}
+		
+	}
+	
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}

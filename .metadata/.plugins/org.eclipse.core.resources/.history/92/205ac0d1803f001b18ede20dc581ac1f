@@ -1,0 +1,74 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+public class Loginpagenew {
+
+	 WebDriver driver;
+	 
+	 public void loginpage(WebDriver ldriver) {
+		 
+		 this.driver=ldriver;
+	 }
+	 
+	 
+	
+	@FindBy(name="txtUserName") WebElement username;
+	
+	@FindBy(how=How.NAME,using="txtPassword")WebElement password;
+	
+	@FindBy(how=How.NAME,using="Submit") WebElement submit;
+	
+	@FindBy (how=How.XPATH,using= "//a[text()='Logout']") WebElement logout;
+	
+    @FindBy(how=How.XPATH,using="//a[text()=\"Change Password\"]") WebElement Changepass;
+	
+	@FindBy(how=How.CLASS_NAME,using="editbutton")WebElement edit;
+	
+	//@FindBy(how=How.XPATH,using="/html/body/div/div[2]/div[2]/form/div/input[2]")WebElement save;
+	
+	@FindBy(how=How.XPATH,using="//input[@name=\"txtOldPassword\"]")WebElement Oldpass;
+	
+	@FindBy(how=How.XPATH,using="//input[@name=\"txtNewPassword\"]")WebElement newpass;
+	
+	@FindBy(how=How.XPATH,using="//label[text()=\"Confirm New Password\"]")WebElement conpass;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"editBtn\"]")WebElement save;
+	
+	
+	public void loginpageHRM(String uid,String pass) {
+		
+		
+		username.clear();
+		username.sendKeys(uid);
+		
+		password.clear();
+		password.sendKeys(pass);
+		
+		submit.click();
+		
+		
+	}
+	
+   public void changepass(String OD,String NW, String CO ) {
+    	
+    	
+    	Changepass.click();
+    	
+    	edit.click();
+    	
+    	Oldpass.sendKeys(OD);
+    	
+    	newpass.sendKeys(NW);
+    	
+    	conpass.sendKeys(CO);
+    	
+    	save.click();
+    }	
+	
+	
+	
+}

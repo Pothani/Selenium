@@ -1,0 +1,25 @@
+package Javaconcepts;
+
+public class MethodOverloading 
+{
+
+	public void demo(int a, int b) 
+	{
+		
+	}
+	public void demo(int c, String d) 
+	{
+		
+	}
+	public void demo(String s) 
+	{
+		
+	}
+	public static void main(String[] args)
+	{
+		
+		
+
+	}
+
+}

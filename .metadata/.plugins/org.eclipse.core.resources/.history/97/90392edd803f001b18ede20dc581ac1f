@@ -1,0 +1,83 @@
+package SeleniumFirstClass;
+
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class practise {
+
+	public static void main(String[] args) throws MalformedURLException {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Bhargav\\chromedriver.exe");
+		
+		WebDriver driver= new ChromeDriver();
+		
+		driver.get("http://www.flipkart.com");
+		
+		driver.manage().window().maximize();
+		
+	  List<WebElement> frames=	driver.findElements(By.tagName("iframe"));
+	  
+	   System.out.println(frames.size());
+		
+		List<WebElement> Links=driver.findElements(By.tagName("a")); //it will get all links
+		
+		System.out.println("Links are"+Links.size()); //printing Links
+		
+		for(int i=0;i<Links.size();i++) { //looping all links
+			
+		WebElement we=	Links.get(i); //getting all Links one by one
+		
+		String str = we.getAttribute("href"); //getting atleast one attibute for each link
+		
+		verify(str);
+		
+		}
+		
+	}
+	
+	
+	    
+	
+	public static void verify(String bro) throws MalformedURLException {
+		
+		
+		try {
+		URL U=new URL(bro); // creating the object of URL
+		
+		HttpURLConnection con = (HttpURLConnection)U.openConnection(); //Sending HttpURL connection
+		
+		con.connect(); 
+		
+		//verifying the links or vaild or broken based on the HttpURL Response code
+		
+		if(con.getResponseCode()==200) {
+			
+			System.out.println(bro+""+con.getResponseMessage());
+		}
+		if(con.getResponseCode()==400) {
+			System.out.println(bro+""+con.getResponseMessage());
+		}
+		
+		
+		}catch(Exception e) {
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+
+}

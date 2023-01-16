@@ -1,0 +1,33 @@
+package Com.Pages;
+
+public class Overload 
+{
+	
+	
+	public void demo()
+	{
+		System.out.println("First Method");
+		
+	}
+	
+	public void demo(int a ,int b)
+	{
+		int r= a+b;
+		System.out.println(r);
+		
+	}
+	
+	public void demo(int c, String s)
+	{
+		System.out.println(s);
+		System.out.println(c);
+		
+	}
+
+	public static void main(String[] args) 
+	{
+		
+
+	}
+
+}

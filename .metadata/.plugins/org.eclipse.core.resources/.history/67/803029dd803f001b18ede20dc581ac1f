@@ -1,0 +1,92 @@
+package SeleniumFirstClass;
+
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class session2 {
+
+	public static void main(String[] args) {
+
+           
+           
+          System.setProperty("webdriver.chrome.driver","C:\\Bhargav\\chromedriver.exe");
+          
+          WebDriver driver = new ChromeDriver();
+          
+          driver.get("http://www.makemytrip.com");
+          
+          driver.manage().window().maximize();
+          
+          List<WebElement> Links =driver.findElements(By.tagName("a"));
+          
+          System.out.println("Total Links are"+Links.size());
+          
+          for(int i=0;i<Links.size();i++) {
+        	  
+        	  WebElement wd=Links.get(i);
+        	  
+        	  String str=wd.getAttribute("href");
+        	  
+        	  verify(str);
+        	  
+        	  
+          }
+          
+           
+    	
+		
+	}
+	
+	public static void verify(String check) {
+		
+		try {
+			
+			URL u = new URL(check);
+			
+			HttpURLConnection con = (HttpURLConnection)u.openConnection();
+			
+			con.connect();
+			
+			if(con.getResponseCode()==200) {
+				
+				System.out.println(con.getResponseMessage()+check);
+				
+				
+			}
+			
+			if(con.getResponseCode()==400) {
+				System.out.println(con.getResponseMessage()+check);
+			}
+			
+			
+			
+		}catch(Exception e) {
+			
+		}
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

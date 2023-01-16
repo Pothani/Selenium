@@ -1,0 +1,30 @@
+package Com.Pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Brokenlinks {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\bharg\\eclipse-july\\BhargavQAProject\\CommonJarFiles\\chromedriver.exe");
+		
+		ChromeDriver d1= new ChromeDriver();
+		
+		d1.get("www.google.co.in");
+		
+		d1.manage().window().maximize();
+		
+      List<WebElement> Ele=d1.findElements(By.tagname("a"));
+      
+      for(WebElement add: Ele) {
+    	  
+    	  String s
+      }
+
+	}
+
+}

@@ -1,0 +1,89 @@
+package SeleniumFirstClass;
+
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class brokenlinks2 {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Bhargav\\chromedriver.exe");
+		
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("http://www.google.com");
+		
+	List<WebElement> Links	=driver.findElements(By.tagName("a"));
+	
+	System.out.println("Total links are"+Links.size() );
+	
+	for(int i=0;i<Links.size();i++) {
+		
+		   WebElement ele=Links.get(i);
+		   
+		   String str=ele.getAttribute("href");
+		   
+		   verify(str);
+		   	
+			
+		}
+		
+		
+	}
+
+	public static void verify(String Link) {
+		
+		try {
+			
+			URL u= new URL(Link);
+			
+			HttpURLConnection con = (HttpURLConnection)u.openConnection();
+			
+			con.connect();
+			
+			if(con.getResponseCode()==200) {
+				
+				System.out.println(con.getResponseMessage()+Link);
+			}
+			
+			if(con.getResponseCode()==400) {
+				
+				System.out.println(con.getResponseMessage()+Link);
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}catch(Exception e) {
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+}

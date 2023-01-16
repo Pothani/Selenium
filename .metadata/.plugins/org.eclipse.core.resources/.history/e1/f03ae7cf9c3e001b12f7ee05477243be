@@ -1,0 +1,17 @@
+package seleniumtoday;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class demo {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.gecko.driver","C:\\Bhargav\\geckodriver.exe");
+		
+		FirefoxDriver d= new FirefoxDriver();
+		
+		d.get("http://apps.qaplanet.in/hrm/login.php");
+
+	}
+
+}

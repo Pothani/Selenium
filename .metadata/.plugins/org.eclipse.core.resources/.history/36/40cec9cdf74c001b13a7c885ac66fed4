@@ -1,0 +1,22 @@
+package Javaconcepts;
+
+public class childclass extends parentclass {
+	
+	//Aquarig the properties of another classs
+	//To do that we need to create a parent and child 
+	//by using extends keyword
+
+	public void add() 
+	{
+		System.out.println("This is child class object");
+	}
+	public static void main(String[] args) {
+		
+		childclass ch= new childclass();
+		ch.demo();
+		ch.add();
+		
+
+	}
+
+}

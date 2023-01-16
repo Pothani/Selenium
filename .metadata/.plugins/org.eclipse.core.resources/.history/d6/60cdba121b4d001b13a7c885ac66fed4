@@ -1,0 +1,14 @@
+package Javaconcepts;
+
+public class BMW extends Car
+{
+	public void start() 
+	{
+		System.out.println("Car.....Started from BMW");
+	}
+
+	public void theftsafty() 
+	{
+		System.out.println("Car.....theftsafty");
+	}
+}

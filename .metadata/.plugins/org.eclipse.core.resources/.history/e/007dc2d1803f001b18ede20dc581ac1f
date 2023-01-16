@@ -1,0 +1,49 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+public class Changepassword {
+	
+    WebDriver driver;
+	 
+	 public  void changepass(WebDriver driver2) {
+		 
+		 this.driver=driver2;
+	 }
+	 
+	
+	
+	@FindBy(how=How.XPATH,using="//a[text()=\"Change Password\"]") WebElement Changepass;
+	
+	@FindBy(how=How.XPATH,using="/html/body/div/div[1]/input")WebElement edit;
+	
+	//@FindBy(how=How.XPATH,using="/html/body/div/div[2]/div[2]/form/div/input[2]")WebElement save;
+	
+	@FindBy(how=How.XPATH,using="//input[@name=\"txtOldPassword\"]")WebElement Oldpass;
+	
+	@FindBy(how=How.XPATH,using="//input[@name=\"txtNewPassword\"]")WebElement newpass;
+	
+	@FindBy(how=How.XPATH,using="//label[text()=\"Confirm New Password\"]")WebElement conpass;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"editBtn\"]")WebElement save;
+	
+    public void changepass(String OD,String NW, String CO ) {
+    	
+    	
+    	Changepass.click();
+    	
+    	edit.click();
+    	
+    	Oldpass.sendKeys(OD);
+    	
+    	newpass.sendKeys(NW);
+    	
+    	conpass.sendKeys(CO);
+    	
+    	save.click();
+    }	
+
+}

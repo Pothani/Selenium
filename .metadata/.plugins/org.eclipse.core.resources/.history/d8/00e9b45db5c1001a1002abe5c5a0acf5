@@ -1,0 +1,24 @@
+package javaexamples;
+
+public class strings {
+	
+	
+    public class classa{
+	  
+    	
+	
+    }
+
+    public class classb{
+	
+	
+    }
+
+	public static void main(String[] args) {
+		
+		System.out.println("This is inheritance");
+		
+		
+		
+	}
+}

@@ -1,0 +1,26 @@
+package FunctionLibrary;
+
+
+public class NonStaticMethod
+		{
+		   public int add(int a, int b)
+		   {
+			   
+			   int sum= a+b;
+			   
+			   return sum;
+		   }
+			
+		 public static void main(String args[]) {
+			
+			 NonStaticMethod  NS= new NonStaticMethod();
+			 
+			int res= NS.add(20, 20);
+			
+			System.out.println(res);
+		}
+	}
+
+	
+
+

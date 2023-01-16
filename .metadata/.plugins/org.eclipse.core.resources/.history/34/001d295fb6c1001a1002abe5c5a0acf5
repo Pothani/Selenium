@@ -1,0 +1,43 @@
+package javaexamples;
+
+public class strings {
+	
+	
+    public class classa{
+	  
+    	public void demo() {
+    		
+    		System.out.println("this is classA");
+    		
+    		int a= 10;
+    		double d = 109;
+    		
+    	}
+	
+    }
+
+    public class classb extends classa{
+	
+	 public void demo2() {
+    	int b= 20;
+    	
+    	System.out.println("classb");
+    	
+	 }
+    	
+    	
+    }
+    
+
+	public static void main(String[] args) {
+		
+	System.out.println("This is inheritance");
+		
+		classb obj = new classb();
+		
+		obj.demo();
+		obj.demo2();
+		
+	}
+    }
+}

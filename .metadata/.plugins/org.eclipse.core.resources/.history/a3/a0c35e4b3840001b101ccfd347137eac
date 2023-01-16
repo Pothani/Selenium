@@ -1,0 +1,11 @@
+package FunctionLibrary;
+
+public class NonStaticMethod {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Bhargav");
+
+	}
+
+}

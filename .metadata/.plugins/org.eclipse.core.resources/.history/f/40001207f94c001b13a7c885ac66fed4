@@ -1,0 +1,10 @@
+package Javaconcepts;
+
+public class C 
+{
+
+	public void fish()
+	{
+		System.out.println("This is chil-method");
+	}
+}

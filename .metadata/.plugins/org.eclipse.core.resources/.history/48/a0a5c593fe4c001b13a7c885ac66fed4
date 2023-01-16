@@ -1,0 +1,15 @@
+package Javaconcepts;
+
+public class C 
+{
+
+	public void add()
+	{
+	System.out.println("This is class C");
+	}
+	
+	public static void main(String args[]) 
+	{
+		
+	}
+}

@@ -1,0 +1,32 @@
+package Practisejava;
+
+import java.util.Scanner;
+
+public class swapnumber 
+{
+
+	public static final void main(String[] args) 
+	{
+		Scanner s= new Scanner(System.in);
+		System.out.println("Enter the number a= ");
+		int a= s.nextInt();
+		System.out.println("Enter the number b= ");
+		int b= s.nextInt();
+		
+		
+		//int a=10,b=20;
+		a=a+b;//a=30
+		b=a-b;//b=30-20----b=10
+		a=a-b;//a=30-10----b=20
+		System.out.println("a"+a);
+		System.out.println("a"+b);
+		
+		String s1="Selenium";
+		System.out.println(s1.substring(1, 3));
+		System.out.println(s1.substring(0, 1));
+		
+		
+
+	}
+
+}

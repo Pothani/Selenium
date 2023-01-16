@@ -1,0 +1,18 @@
+package Javaconcepts;
+
+public class childclass extends parentclass {
+
+	public void add() 
+	{
+		System.out.println("This is child class object");
+	}
+	public static void main(String[] args) {
+		
+		childclass ch= new childclass();
+		ch.demo();
+		ch.add();
+		
+
+	}
+
+}

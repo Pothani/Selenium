@@ -1,0 +1,10 @@
+package Javaconcepts;
+
+public class D {
+	
+	public void sub()
+	{
+		System.out.println("This is class D");
+	}
+
+}

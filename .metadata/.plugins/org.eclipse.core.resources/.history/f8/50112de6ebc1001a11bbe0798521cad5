@@ -1,0 +1,21 @@
+package javaexamples;
+
+public class polymorpism {
+	
+	public class classA{
+		
+		
+	}
+	
+   public class classB{
+		
+		
+	}
+
+	public static void main(String[] args) {
+
+
+
+	}
+
+}

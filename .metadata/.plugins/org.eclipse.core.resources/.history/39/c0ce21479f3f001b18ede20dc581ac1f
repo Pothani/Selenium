@@ -1,0 +1,40 @@
+package Com.Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Practise {
+	
+	public void AppLaunch() {
+		driver.get("http://primusbank.qedgetech.com/");
+	}
+	
+	public void AppStart() {
+		 
+		driver.findElement(By.xpath("//*[@name=\"txtuId\"]")).sendKeys("Admin");
+		
+		driver.findElement(By.xpath("//*[@id='txtPword']")).sendKeys("Admin");
+		
+		driver.findElement(By.xpath("//*[@name=\"login\"]")).click();
+      
+	}
+	
+    public void Appclose() {
+		
+    	driver.findElement(By.xpath("//*[@src=\"images/admin_but_03.jpg\"]")).click();
+	}
+
+    public void Appstop() {
+	
+    }
+	
+	
+	ChromeDriver driver= new ChromeDriver();
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\bharg\\eclipse-july\\BhargavQAProject\\CommonJarFiles\\chromedriver.exe");
+		
+	}
+
+}

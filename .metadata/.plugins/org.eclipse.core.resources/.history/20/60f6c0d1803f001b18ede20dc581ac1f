@@ -1,0 +1,53 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+public class flipkartlogin {
+
+	WebDriver driver;
+	
+	public void login(WebDriver driver) 
+	{
+		
+		this.driver=driver;
+	}
+	
+	
+   @FindBy(how=How.XPATH,using="//a[text()='Login']")WebElement login;
+   
+   @FindBy(how=How.XPATH,using="pointer-events: auto;\r\n" + 
+   		"box-sizing: border-box;\r\n" + 
+   		"margin: 0;\r\n" + 
+   		"padding: 8px 10px 10px 0;\r\n" + 
+   		"width: 100%;\r\n" + 
+   		"color: #000;\r\n" + 
+   		"font-size: inherit;\r\n" + 
+   		"background: #fff;\r\n" + 
+   		"border: none;\r\n" + 
+   		"border-bottom: 1px solid #e0e0e0;\r\n" + 
+   		"font-family: Roboto,Arial,sans-serif;\r\n" + 
+   		"letter-spacing: 0;")WebElement email;
+   
+   @FindBy (how=How.CLASS_NAME,using="_2zrpKA _3v41xv _1dBPDZ")WebElement pass;
+   
+   @FindBy (how=How.CLASS_NAME,using="_1hgiYz")WebElement loginclick;
+	
+	public void Filpkarlogin(String EMAIL,String PASS ) 
+	
+	{
+	
+		login.click();
+		email.sendKeys(EMAIL);
+		pass.sendKeys(PASS);
+		
+		loginclick.click();
+		
+		
+		
+		
+		
+}
+}

@@ -1,0 +1,24 @@
+package Javaconcepts;
+
+public class Interview 
+{
+	
+	
+
+	public static void main(String[] args) 
+	{
+		
+		String str="Bhargav";
+		String str2="Bhargav";
+		
+		
+		
+		
+		}
+		
+		
+	}
+		
+		
+
+

@@ -1,0 +1,30 @@
+package javaexamples;
+
+public class polymorpism {
+	
+	public class classA{
+		
+		public void demo1() {
+			
+			
+		}
+		
+	}
+	
+   public class classB{
+	   
+	   public void demo2() {
+			
+			
+		}
+		
+		
+	}
+
+	public static void main(String[] args) {
+
+
+
+	}
+
+}

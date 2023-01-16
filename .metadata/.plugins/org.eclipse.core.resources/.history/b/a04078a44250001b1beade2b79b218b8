@@ -1,0 +1,9 @@
+package Seleniumconcepts;
+
+public class Assertions
+{
+	@Test
+	
+	
+
+}

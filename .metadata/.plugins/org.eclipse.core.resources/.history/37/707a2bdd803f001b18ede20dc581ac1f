@@ -1,0 +1,67 @@
+package SeleniumFirstClass;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo {
+
+	
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Bhargav\\chromedriver.exe");
+		WebDriver d1 = new ChromeDriver();
+		d1.get("http://apps.qaplanet.in/hrm/login.php");
+		
+		//verify home page is displayed or not
+		
+		if(d1.getTitle().equals("OrangeHRM - New Level of HR Management")){
+			
+			
+			System.out.println("Home page is displyed");
+			
+		}
+		else
+		{
+			
+			System.out.println("not displyed");
+			
+		}
+		
+
+		//creating webelement 
+		
+		WebElement UN=d1.findElement(By.xpath("//*[@id=\"Table_01\"]/tbody/tr[1]/td[2]/table/tbody/tr[2]/td[2]/input"));
+		WebElement Pw=d1.findElement(By.xpath("//*[@id=\"Table_01\"]/tbody/tr[1]/td[2]/table/tbody/tr[3]/td[2]/input"));
+		WebElement Login = d1.findElement(By.xpath("//*[@id=\"Table_01\"]/tbody/tr[1]/td[2]/table/tbody/tr[4]/td[1]/input"));
+		WebElement reset = d1.findElement(By.xpath("//*[@id=\"Table_01\"]/tbody/tr[1]/td[2]/table/tbody/tr[4]/td[2]/input"));
+		
+		//displaying 
+		
+		if(UN.isDisplayed()) {
+			System.out.println("UN is displyed");
+		}
+			else {
+				
+				System.out.println("UN is not displyed");
+			}
+		
+		if(Pw.isDisplayed()) {
+			
+			System.out.println("Pw is displyed");
+		}
+		
+		if(Login.isDisplayed()) {
+			
+			System.out.println("Login is displyed");
+		}
+		
+		
+	}
+
+		
+	}
+
+

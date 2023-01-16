@@ -1,0 +1,27 @@
+package practise05;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class mousehover {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Bhargav\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("htto://www.manutd.com");
+		Thread.sleep(2000);
+		
+		Actions act =new Actions(driver);
+		
+		act.moveToElement(driver.findElement(By.xpath("//*[@id=\"navigation\"]/div/nav[1]/ul[1]/li[2]/a/span[2]")));
+		
+		
+
+		
+	}
+
+}

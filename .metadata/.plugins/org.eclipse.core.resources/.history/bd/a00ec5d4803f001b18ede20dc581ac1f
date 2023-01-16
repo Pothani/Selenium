@@ -1,0 +1,26 @@
+package pages.testcases;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import pages.Loginpagenew;
+import utility.browserfactory;
+
+public class verifyHRMlogin1 {
+	
+	
+	@Test
+	public void chcklogin() {
+		
+		WebDriver driver=browserfactory.startbroser("chrome","http://apps.qaplanet.in/hrm/login.php");
+		
+		Loginpagenew new1=	PageFactory.initElements(driver, Loginpagenew.class);
+		
+		new1.loginpageHRM("qaplanet1", "lab1");	
+
+		new1.changepass("qaplanet1", "lab2", "lab2");
+	
+	}
+
+}

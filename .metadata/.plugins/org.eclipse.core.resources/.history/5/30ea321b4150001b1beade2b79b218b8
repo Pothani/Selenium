@@ -1,0 +1,30 @@
+package Seleniumconcepts;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Dropdown 
+{
+
+	public static void main(String[] args) 
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\bharg\\eclipse-july\\BhargavQAProject\\CommonJarFiles\\chromedriver.exe");
+		
+		WebDriver driver= new ChromeDriver();
+		
+		driver.get("https://www.browserstack.com/");
+		driver.manage().window().maximize();
+		WebElement developers_dropdown = driver.findElement(By.id("developers-menu-toggle"));
+		Select objSelect = new Select(developers_dropdown);
+		objSelect.selectByIndex(2);
+		Thread.sleep(3000);
+		
+		
+		
+
+	}
+
+}

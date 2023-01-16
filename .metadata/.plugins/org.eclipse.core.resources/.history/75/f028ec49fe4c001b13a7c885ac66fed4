@@ -1,0 +1,22 @@
+package Javaconcepts;
+
+public class B extends A
+{
+	public void demo() 
+	   {
+		   
+		  System.out.println("This is class B");
+	   }
+
+	public static void main(String args[]) 
+	{
+		B b =new B();
+		b.Add();
+		b.demo();
+		
+		
+		
+		
+		
+	}
+}

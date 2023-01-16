@@ -1,0 +1,31 @@
+package SeleniumFirstClass;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+public class onepage {
+
+	public static void main(String[] args) {
+		
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Bhargav\\chromedriver.exe");
+		
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("http://apps.qaplanet.in/hrm/index.php?menu_no_top=time");
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		Select sct =new Select(driver.findElement(By.name("cmbStartDay")));
+		
+		sct.selectByValue("Monday");
+		
+		
+	}
+
+}

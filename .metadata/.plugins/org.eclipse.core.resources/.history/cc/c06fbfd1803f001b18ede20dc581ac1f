@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+/**
+ * @author bharg
+ *
+ */
+public class HRMLogin {
+	
+	
+	WebDriver driver;
+	
+	By username=By.name("txtUserName");
+	
+	By password=By.name("txtPassword");
+	
+	By login = By.name("Submit");
+	
+	
+	public HRMLogin(WebDriver driver) {
+		
+		this.driver=driver;
+	}
+	
+	
+	public void typeusername() {
+		
+		driver.findElement(username).sendKeys("qaplanet1");
+	}
+	public void typeupassword() {
+		driver.findElement(password).sendKeys("lab1");
+	}
+	public void typelogin() {
+		driver.findElement(login).click();
+	}
+
+}

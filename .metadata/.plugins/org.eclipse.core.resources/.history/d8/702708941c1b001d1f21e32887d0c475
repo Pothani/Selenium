@@ -1,0 +1,30 @@
+package demo;
+
+public class Basicscript {
+	
+	public Basicscript()
+	{
+		System.out.println("Bhargav");
+		
+	}
+	
+	public Basicscript(int f) {
+	
+		System.out.println(f);
+	}
+	
+	
+	public static void main(String[] args) 
+	{
+    
+		Basicscript d= new Basicscript();
+		Basicscript d1= new Basicscript(2);
+		
+	
+		
+		
+		
+		  
+	
+	}
+}

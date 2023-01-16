@@ -1,0 +1,47 @@
+package seleniumtoday;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class demo {
+	
+	public void AppLaunch(){
+		
+	}
+	
+    public void AppStart(){
+		
+	}
+    
+    public void AppLogin(){
+		
+	}
+
+    public void AppLogout(){
+	
+    }
+    public void Appclose(){
+    	
+    }
+
+	public static void main(String[] args) {
+		
+		
+		/*System.setProperty("webdriver.gecko.driver","C:\\Bhargav\\geckodriver.exe");
+		
+		FirefoxDriver d= new FirefoxDriver();
+		
+		d.get("http://apps.qaplanet.in/hrm/login.php");
+		
+		d.findElement(By.name("txtUserName")).sendKeys("qaplanet1");
+		
+		d.findElement(By.name("txtPassword")).sendKeys("lab1");
+		
+		d.findElement(By.name("Submit")).click();
+		
+		
+		//d.close();
+*/
+	}
+
+}

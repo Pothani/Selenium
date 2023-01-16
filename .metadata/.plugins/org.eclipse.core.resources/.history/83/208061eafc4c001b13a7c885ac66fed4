@@ -1,0 +1,10 @@
+package Javaconcepts;
+
+public class parentclass {
+
+	
+	public void demo() 
+	{
+		System.out.println("This is Parent class object");
+	}
+}

@@ -1,0 +1,22 @@
+package Practisejava;
+
+import java.util.Scanner;
+
+public class Factorialnumber 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the number");
+		int r= s.nextInt();
+		int fact=1;
+		for(int i=1;i<fact;i++)
+		{
+			fact=fact*i;
+		}
+       
+		System.out.println(fact);
+	}
+
+}

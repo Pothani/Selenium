@@ -1,0 +1,24 @@
+package Com.Pages;
+
+public class Override
+{
+    public void add()
+    {
+    	System.out.println("Bharagv");
+    }
+    public class two extends Override
+    {
+    	public void add()
+        {
+        	System.out.println("Bharagv");
+        }
+    }
+	
+	public static void main(String[] args) 
+	{
+		Override o=new Override();
+		o.add();
+
+	}
+
+}

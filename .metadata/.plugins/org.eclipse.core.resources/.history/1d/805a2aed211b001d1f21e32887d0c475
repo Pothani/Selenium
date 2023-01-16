@@ -1,0 +1,11 @@
+package demo;
+
+public class Basicscript 
+{
+	
+	public static void main(String[] args) 
+	{
+    
+		System.setProperty("C:\\Users\\bharg\\eclipse-july\\Ebanking\\CommonJarFiles\\chromedriver.exe");
+	}
+}

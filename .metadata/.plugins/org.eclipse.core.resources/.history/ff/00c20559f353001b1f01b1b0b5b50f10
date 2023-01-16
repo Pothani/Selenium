@@ -1,0 +1,27 @@
+package Javaconcepts;
+
+public class Reversestring1 
+{
+
+	public void reversestring() {
+		
+		String s1="Bhargav";
+		
+		String s2="";
+		
+		for(int i=s1.length()-1;i>=0;i--) {
+			
+			s2=s2+s1.charAt(i);
+		}
+		
+		System.out.println(s2);
+	}
+	
+	public static void main(String[] args) 
+	{
+		Reversestring1 RE=new Reversestring1();
+		RE.reversestring();
+
+	}
+
+}

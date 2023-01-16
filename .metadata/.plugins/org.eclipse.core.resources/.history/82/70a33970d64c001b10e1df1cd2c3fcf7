@@ -1,0 +1,54 @@
+package CommonFunctionLibrary;
+
+
+public class NonStaticMethod
+		{
+	//method name with return type and with parameters
+		   /*public int add(int a, int b)
+		   {
+			   
+			   int sum= a+b;
+			   
+			   return sum;
+		   }*/
+		   
+		 //method name with return type and without parameters
+		   public int sub()
+		   {
+			  int c= 10;
+			  int d=40;
+			  int com= c+d;
+			  
+			  return com;
+			  
+		   }
+		   
+		   //Method with out return type and with parameters
+		   public void Mul(int d, int f)
+		   {
+			  
+			  int g= d+f;
+			  
+			 
+			  
+		   }
+			
+		 public static void main(String args[]) {
+			
+			 NonStaticMethod  NS= new NonStaticMethod();
+			 
+			/*int res= NS.add(20, 20);
+			
+			System.out.println(res);*/
+			 
+			/* int s=NS.sub();
+			 System.out.println(s);*/
+			 
+		
+			 
+		}
+	}
+
+	
+
+

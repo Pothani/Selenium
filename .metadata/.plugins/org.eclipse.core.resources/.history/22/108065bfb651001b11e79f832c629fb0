@@ -1,0 +1,12 @@
+package Practisejava;
+
+public class Factorialnumber 
+{
+
+	public static void main(String[] args) 
+	{
+		
+
+	}
+
+}

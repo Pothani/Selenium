@@ -1,0 +1,69 @@
+package Com.Pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Practise {
+	
+	public void AppLaunch() {
+		
+		driver.get("http://primusbank.qedgetech.com/");
+	}
+	
+	public void AppStart() {
+		 
+		driver.findElement(By.xpath("//*[@name=\"txtuId\"]")).sendKeys("Admin");
+		
+		driver.findElement(By.xpath("//*[@id='txtPword']")).sendKeys("Admin");
+		
+		driver.findElement(By.xpath("//*[@name=\"login\"]")).click();
+      
+	}
+	
+    public void Appclose() {
+		
+    	driver.findElement(By.xpath("//*[@src=\"images/admin_but_03.jpg\"]")).click();
+	}
+
+    public void Appstop() {
+    	
+    	driver.close();
+	
+    }
+	
+    public void Links() {
+    	
+    	List<WebElement> Ele = driver.findElements(By.tagName("a"));
+    	
+    	for(WebElement add:Ele) {
+    		
+    		String s=add.getText();
+    		
+    		System.out.println(s);
+    	}
+    }
+	
+	ChromeDriver driver= new ChromeDriver();
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\bharg\\eclipse-july\\BhargavQAProject\\CommonJarFiles\\chromedriver.exe");
+	    
+		Practise P1=  new Practise();
+		
+		P1.AppLaunch();
+		
+		P1.AppStart();
+		
+		P1.Appclose();
+		
+		P1.Appstop();
+		
+		
+		
+	}
+
+}

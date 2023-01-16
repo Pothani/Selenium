@@ -1,0 +1,69 @@
+package practise05;
+
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class brokenlinks {
+	
+	
+	WebDriver driver;
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Bhargav\\geckodriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("http://www.manutd.com");
+		
+		driver.manage().window().maximize();
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		List<WebElement> links =driver.findElements(By.tagName("a"));
+		
+		System.out.println("total links are"+links.size());
+		
+		for(int i=0;i<links.size();i++) {
+			
+	    WebElement wd=links.get(i);
+	    
+	    String str = wd.getAttribute("href");
+	    
+	    verify(str);
+				
+		}
+		
+	}
+	public static void verify(String check) {
+		
+		try {
+			
+			URL u=new URL(check);
+			
+			HttpURLConnection con =  (HttpURLConnection)u.openConnection();
+			
+			con.connect();
+			
+			if(con.getResponseCode()==200) {
+				
+				System.out.println(check+con.getResponseMessage());
+			}
+           if(con.getResponseCode()==400) {
+				
+				System.out.println(check+con.getResponseMessage());
+			}
+			
+		}catch(Exception e) {}
+		
+	}
+	
+
+}

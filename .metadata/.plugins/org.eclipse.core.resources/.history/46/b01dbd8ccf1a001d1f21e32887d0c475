@@ -1,0 +1,22 @@
+package demo;
+
+public class Basicscript {
+	
+	
+	public int add(int a, int b) {
+		
+		int c= a+b;
+		return c;
+		
+	}
+
+	public static void main(String[] args) 
+	{
+    
+		Basicscript d= new Basicscript();
+		
+		d.add(2, 3);
+		  
+	
+	}
+}

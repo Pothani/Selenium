@@ -1,0 +1,20 @@
+package Seleniumconcepts;
+
+import org.testng.annotations.Test;
+
+public class Assertions
+{
+	@Test
+	
+	public void demo() {
+		
+		System.out.println("welcome");
+		System.out.println("To the world");
+		System.out.println("GHRMS");
+		System.out.println("VAsu deva");
+	}
+	
+	
+	
+
+}

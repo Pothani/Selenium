@@ -1,0 +1,37 @@
+package Javaconcepts;
+
+public class StringManipulations
+{
+
+	public static void main(String[] args)
+	{
+		
+		String s1="Happy New Year 2021 Y";
+		
+		String S="Bhargav";
+		
+		System.out.println(s1.equals(S));
+		
+	    System.out.println(s1.length());//It will start from 1
+	    
+	    System.out.println(s1.indexOf("Y"));//It will start fromm 0
+	    
+	    System.out.println(s1.indexOf("Y",s1.indexOf("Y")+1));
+	    
+	    String s2="";
+	    
+	    for(int i=s1.length()-1;i>=0;i--)
+	    {
+	    	s2=s2+s1.charAt(i);
+	    }
+	    	System.out.println(s2);
+	    	
+	    	
+	    System.out.println(s1.trim());
+	    
+	}
+	
+	   
+	    
+
+}

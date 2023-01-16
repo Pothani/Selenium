@@ -1,0 +1,21 @@
+package Practisejava;
+
+public class Reversenumber
+{
+
+	public static void main(String[] args) 
+	{
+		int a=1234, t=0;
+		
+		while(a!=0) 
+		{
+			int r=a%10;
+			t=(a*10)+t;
+			a=a/10;
+			
+			
+		}
+		System.out.println(a);
+	}
+
+}

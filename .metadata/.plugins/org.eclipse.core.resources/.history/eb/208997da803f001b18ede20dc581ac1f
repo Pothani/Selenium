@@ -1,0 +1,21 @@
+package practise7;
+
+public class demo {
+
+	public static void main(String[] args) {
+		
+		System.out.println("welcome to the world");
+		try {
+		int a= 50/0;
+		
+		}
+		
+		catch(Exception e) {
+			
+		}
+		
+
+	}
+
+
+}
